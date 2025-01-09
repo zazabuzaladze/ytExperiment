@@ -20,7 +20,7 @@ const createThumbnail = async (imagePath, outputPath, stats) => {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
     ctx.fillRect(0, 0, image.width, image.height);
 
-    const text = `This video has ${stats.viewCount} views,\nand if you subscribe,\nI will make ${(stats.viewCount * 0.007).toFixed(2)}$`;
+    const text = `This video has ${stats.viewCount} views`;
     const fontSize = Math.floor(Math.min(image.width, image.height) / 7);
     ctx.font = `bold ${fontSize}px Arial`;
     ctx.fillStyle = 'white';
@@ -63,7 +63,6 @@ const updateVideo = async () => {
   });
 
   try {
-    // Get video
     const result = await youtube.videos.list({
       id: "dwSiNA1J72Y",
       part: "statistics,snippet",
@@ -77,8 +76,7 @@ const updateVideo = async () => {
         requestBody: {
           id: "dwSiNA1J72Y",
           snippet: {
-            title: `This video has ${stats.viewCount} views, and if you subscribe, I will make ${(stats.viewCount * 0.007).toFixed(2)}$`,
-            description: `read the subtitles man, dont be lazy`,
+            title: `This video has ${stats.viewCount} views`,
             categoryId: 28,
           },
         },
