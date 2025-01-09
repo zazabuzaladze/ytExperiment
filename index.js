@@ -77,6 +77,7 @@ const updateVideo = async () => {
           id: "dwSiNA1J72Y",
           snippet: {
             title: `This video has ${stats.viewCount} views`,
+            description: `This video is a small project of mine. A code runs in the background every 10 minutes, updating the videos title with the current view count. https://github.com/zazabuzaladze/ytExperiment`,
             categoryId: 28,
           },
         },
