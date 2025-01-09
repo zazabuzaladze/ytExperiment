@@ -17,10 +17,13 @@ Das Ziel des Projekts ist es, 1.000 Abonnenten zu erreichen, um die Monetarisier
 - Verwendung eines Cron-Jobs, um alle 8 Minuten Updates zu automatisieren.
 
 ## Verwendete Technologien
-- **Node.js**: Als Laufzeitumgebung für den Backend-Code.
-- **Google APIs (YouTube Data API v3)**: Zum Zugriff auf und zur Aktualisierung von Videodaten.
-- **dotenv**: Für die Verwaltung von Umgebungsvariablen.
-- **cron**: Zur Planung wiederkehrender Updates.
+- **Node.js**: JavaScript-Laufzeitumgebung.
+- **Google APIs (YouTube Data API v3)**: Abrufen von Videostatistiken, Aktualisieren von Metadaten und Festlegen von Thumbnails.
+- **OAuth2 Authentication**: Sicherer API-Zugriff mit google.auth.OAuth2.
+- **Canvas**: Bildbearbeitung zur Erstellung von Thumbnails.
+- **File System (fs)**: Lesen und Schreiben von Dateien für die Thumbnail-Verarbeitung.
+- **dotenv**: Sichere Verwaltung von Umgebungsvariablen.
+- **Asynchronous Programming**: Realisiert mit async/await.
 
 ## Funktionsweise
 - Das Skript ruft die aktuelle Aufrufzahl des Videos mithilfe der YouTube-API ab.
@@ -54,10 +57,13 @@ The project aims to achieve 1,000 subscribers to unlock YouTube monetization and
 - Uses a cron job to automate updates every 8 minutes.
 
 ## Technologies Used
-- **Node.js**: For the backend runtime environment.
-- **Google APIs (YouTube Data API v3)**: To access and update video data.
-- **dotenv**: For environment variable management.
-- **cron**: To schedule recurring updates.
+- **Node.js**: JavaScript runtime environment.
+- **Google APIs (YouTube Data API v3)**: Fetch video stats, update metadata, and set thumbnails.
+- **OAuth2 Authentication**: Secure API access using google.auth.OAuth2.
+- **Canvas**: Image manipulation for generating thumbnails.
+- **File System (fs)**: Read and write files for thumbnail processing.
+- **dotenv**: Manage environment variables securely.
+- **Asynchronous Programming**: Handled via async/await.
 
 ## How It Works
 - The script fetches the video’s current view count using the YouTube API.
